@@ -521,6 +521,10 @@ class RobotModelParser():
                     bpy.ops.import_scene.obj(filepath=geom_path)
                 elif filetype == 'stl' or filetype == 'STL':
                     bpy.ops.import_mesh.stl(filepath=geom_path)
+                elif filetype == '3ds' or filetype == '3DS':
+                    bpy.ops.import_scene.autodesk_3ds(filepath=geom_path)
+                elif filetype == 'x3d' or filetype == 'wrl':
+                    bpy.ops.import_scene.x3d(filepath=geom_path)
                 # hack for test:
                 elif filetype == 'bobj' or filetype == 'BOBJ':
                     import_bobj(geom_path)
